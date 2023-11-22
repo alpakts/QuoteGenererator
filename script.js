@@ -1,11 +1,21 @@
 var apiQuotes=[];
 const quoteText=document.querySelector("#quote");
 const authorText=document.querySelector("#author");
+const twitterBtn=document.querySelector("#twitter");
 const showNewQuote=(listQutote)=>{
     const quote=apiQuotes[Math.floor(Math.random()* apiQuotes.length)]
-    console.log(quote);
     quoteText.innerHTML=quote.text;
-    authorText.innerHTML=quote.author;
+    if (!quote.author) {
+        authorText.innerHTML="Unknown";
+    }else{
+        authorText.innerHTML=quote.author;
+    }
+    if (quote.text.length>80) {
+        quoteText.classList.add('long-quote')
+    }else{
+        quoteText.classList.remove('long-quote')
+    }
+
 }   
 async function get(){
     try {
@@ -17,5 +27,7 @@ async function get(){
         alert("an error occured")
     }
 }
-
+const tweet=async()=>{
+    fetch("https://twitter.com/intent/tweet")
+}
  get();
