@@ -27,7 +27,9 @@ async function get(){
         alert("an error occured")
     }
 }
-const tweet=async()=>{
-    fetch("https://twitter.com/intent/tweet")
+const tweet=()=>{
+    const twitterUrl=`https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent} \n +
+     from : ${window.location.origin} `
+    window.open(twitterUrl)
 }
  get();

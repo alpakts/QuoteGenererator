@@ -26,6 +26,14 @@ body {
 .quote-text {
   font-size: 2.75rem;
 }
+footer{
+    position: fixed;
+    font-size: 1.3rem;
+    bottom: 0;
+}
+.fa-heart{
+    color: red;
+}
 .long-quote {
   font-size: 2rem;
 }
@@ -62,11 +70,21 @@ button:active{
     transform: translateY(0.3rem);
     box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
+a {
+    text-decoration: none;
+}
 .twitter-button:hover{
     color: #38a1f3;
 }
 .fa-twitter{
     font-size: 1.5rem;
+}
+.github-container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
 }
 @media screen and (max-width:1000px) {
     .quote-container{
@@ -74,6 +92,11 @@ button:active{
     }
     .quote-text{
         font-size: 2.5rem;
+    }
+    footer{
+        position: fixed;
+        font-size: .6rem;
+        bottom: 0;
     }
     
 }
