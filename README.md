@@ -1,6 +1,6 @@
 # Quote Generator
 ## Description
-* an app for reading quotes with html js css
+* an app for read quotes ,generate quotes and share on tweeter  with html js css
 
 ## Authors
 github.com/alpakts
